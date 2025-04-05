@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zobo Order Page</title>
+  <style>
+    body { 
+    font-family: Arial;
+    padding: 20px;
+    max-width: 600px; 
+    margin: auto; 
+    background-color: #f4f4f4; 
+    }
+    h2 { text-align: center; color: darkred; }
+    marquee { font-size: 1.2em; color: darkred; }
+    form { background: white; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    input, select, textarea { width: 100%; padding: 10px 2px; margin: 10px 0; }
+    button { background: darkred; color: white; padding: 10px; border: none; cursor: pointer; border-radius: 5px; width: 100%;}
+    button:hover { background: #110201; color: white;} 
+    </style>
+</head>
+<body>
+
+  <h2>Order Fresh Zobo Drink</h2>
+  <marquee behavior="scroll" direction="left">We Currently Distribute within Akure & Dutse only</marquee>
+  <form action="https://formspree.io/f/xnqeeajj" method="POST">
+    <label for="name">Full Name</label>
+    <input type="text" name="name" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" name="phone" required>
+
+    <label for="address">Delivery Address</label>
+    <textarea name="address" required></textarea>
+
+    <label for="size">Choose Size</label>
+    <select name="size" required>
+      <option value=" " selected>select size</option>
+      <option value="small">50cl Bottle (₦400)</option>
+      <option value="medium">80cl Bottle (₦800)</option>
+      <option value="large">1ltr (₦1200)</option>
+    </select>
+
+    <label for="quantity">Quantity</label>
+    <input type="number" name="quantity" min="1" value="1" required>
+
+    <label for="payment">Payment Method</label>
+    <select  name="payment" required>
+      <option value=" " selected>--Select payment method--</option>
+      <option value="cod">Cash on Delivery</option>
+      <option value="transfer">Bank Transfer</option>
+    </select>
+
+    <button type="submit">Place Order</button>
+  </form>
+
+</body>
+</html>
